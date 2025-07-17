@@ -11,7 +11,9 @@ const ErrorExample = () => {
     // }
 
     const removeItem = () => {}
-    const clearAllItems = () => {}
+    const clearAllItems = () => {
+      setPeople([])
+    }
   return (
     <div>
     
@@ -29,7 +31,7 @@ const ErrorExample = () => {
             <button type="button">remove</button>
           </div>)
         })}
-        <button type="button" style={{marginTop: '2rem'}} className="btn">Clear Items</button>
+        <button type="button" style={{marginTop: '2rem'}} className="btn" onClick={clearAllItems}>Clear Items</button>
       
       </div>
       
