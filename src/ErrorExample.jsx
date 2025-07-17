@@ -10,7 +10,9 @@ const ErrorExample = () => {
 
     // }
 
-    const removeItem = () => {}
+    const removeItem = (id) => {
+      console.log(id)
+    }
     const clearAllItems = () => {
       setPeople([])
     }
@@ -28,7 +30,7 @@ const ErrorExample = () => {
           console.log(person)
           return( <div key={id}>
             <h4>{name}</h4>
-            <button type="button">remove</button>
+            <button type="button" onClick={()=>removeItem}>remove</button>
           </div>)
         })}
         <button type="button" style={{marginTop: '2rem'}} className="btn" onClick={clearAllItems}>Clear Items</button>
